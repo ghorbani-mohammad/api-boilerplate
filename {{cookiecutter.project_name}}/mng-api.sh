@@ -2,7 +2,7 @@
 
 PROJECT_NAME='{{cookiecutter.project_name}}'
 SERVER_NAME='{{cookiecutter.server}}'
-SERVER_PATH='{{cookiecutter.server_path}}'
+PROJECT_PATH='{{cookiecutter.project_path}}'
 
 API_CONTAINER_NAME=${PROJECT_NAME}'_api'
 DB_CONTAINER_NAME=${PROJECT_NAME}'_db'
@@ -60,7 +60,7 @@ function create_admin_user() {
 
 function issue_https_certificate() {
     sudo certbot --nginx certonly -d {{cookiecutter.domain}}
-    sudo ln -s ${SERVER_PATH}${NGINX_FILE} /etc/nginx/sites-enabled/${NGINX_FILE}
+    sudo ln -s ${PROJECT_PATH}${NGINX_FILE} /etc/nginx/sites-enabled/${NGINX_FILE}
     sudo service nginx restart
 }
 
@@ -87,7 +87,7 @@ function remove_unused_image() {
 
 function scp_conf() {
     echo -e "\n ... copy conf files to server ... \n"
-    scp ${COMPOSE_FILE} ${NGINX_FILE} mng-api.sh doc.json .docpasswd ${SERVER_NAME}:${SERVER_PATH}
+    scp ${COMPOSE_FILE} ${NGINX_FILE} mng-api.sh doc.json .docpasswd ${SERVER_NAME}:${PROJECT_PATH}
 }
 
 case $1 in
@@ -95,7 +95,7 @@ scp_conf)
     scp_conf
 ;;
 up_remote)
-    ssh -t ${SERVER_NAME} "cd ${SERVER_PATH}; ./mng-api.sh up"
+    ssh -t ${SERVER_NAME} "cd ${PROJECT_PATH}; ./mng-api.sh up"
 ;;
 up)
     pull

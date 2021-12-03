@@ -2,7 +2,7 @@
 
 - Server: **{{cookiecutter.server}}**
 - Port: {{cookiecutter.port}}
-- Server path: `{{cookiecutter.server_path}}`
+- Project path: `{{cookiecutter.project_path}}`
 - Doc Link:
 - Nginx log files:
     ```
