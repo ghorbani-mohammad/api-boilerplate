@@ -16,5 +16,5 @@ Other point is that this will craft your new project easily and in a fast way.
 ```
 cookiecutter paht-to-this-dir
 ```
-3. Terminal will ask you question about parameters values. You can use default values by just Enter.
+3. Terminal will ask you question about parameters values. You can use default values by just press Enter.
 4. Boom!!! Your new project structure is ready.
