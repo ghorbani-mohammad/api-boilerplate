@@ -1,0 +1,16 @@
+### Django ###
+__pycache__/
+.idea
+.vscode
+*.log
+*.pot
+*.pyc
+*.sql
+*.sql.gz
+db.sqlite3
+local_settings.py
+todo
+venv
+{{cookiecutter.project_name}}/celerybeat-schedule
+{{cookiecutter.project_name}}/celerybeat.pid
+{{cookiecutter.project_name}}/static

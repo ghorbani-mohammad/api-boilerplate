@@ -1,0 +1,56 @@
+version: '3'
+
+services:
+
+  {{cookiecutter.project_name}}_db:
+    container_name: {{cookiecutter.project_name}}_db
+    image: mdillon/postgis:11
+    restart: unless-stopped
+    volumes:
+      - {{cookiecutter.project_name}}_db:/var/lib/postgresql/data
+
+  {{cookiecutter.project_name}}_api:
+    container_name: {{cookiecutter.project_name}}_api
+    build: .
+    restart: unless-stopped
+    depends_on:
+      - {{cookiecutter.project_name}}_db
+    volumes:
+      - .:/app
+    ports:
+      - {{cookiecutter.port}}:80
+    command: ["python", "/app/{{cookiecutter.project_name}}/manage.py", "runserver", "0:80"]
+    environment:
+      DEBUG: 'True'
+
+  {{cookiecutter.project_name}}_celery:
+    container_name: {{cookiecutter.project_name}}_celery
+    build: .
+    working_dir: /app/{{cookiecutter.project_name}}
+    command: ["celery", "-A", "{{cookiecutter.project_name}}", "worker", "-l", "info"]
+    restart: unless-stopped
+    volumes:
+      - .:/app
+    depends_on:
+      - {{cookiecutter.project_name}}_db
+      - {{cookiecutter.project_name}}_redis
+
+  {{cookiecutter.project_name}}_beat:
+    container_name: {{cookiecutter.project_name}}_beat
+    build: .
+    working_dir: /app/{{cookiecutter.project_name}}
+    command: ["celery", "-A", "{{cookiecutter.project_name}}", "beat", "-l", "info"]
+    restart: unless-stopped
+    volumes:
+      - .:/app
+    depends_on:
+      - {{cookiecutter.project_name}}_db
+      - {{cookiecutter.project_name}}_redis
+
+  {{cookiecutter.project_name}}_redis:
+    container_name : {{cookiecutter.project_name}}_redis
+    image: redis:5.0.8
+    restart: unless-stopped
+
+volumes:
+  {{cookiecutter.project_name}}_db:
