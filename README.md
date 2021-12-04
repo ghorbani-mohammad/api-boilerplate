@@ -1,4 +1,8 @@
-## What is this?
+## What is Cookiecutter?
+Cookiecutter creates projects from project templates. In ohter words it will help you initialize your projects easily.
+
+
+## What is this repo?
 This will create your project structure for Django DRF by using cookiecutter utility. It will create your Dockerfile, docker-compoe.yml, .gitignore, nginx.conf and other commonly needed configurations. It will create requirement.in that you can put your limits on package versions.
 
 
