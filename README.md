@@ -28,3 +28,9 @@ It includes two steps;
 1. First, put your configuration files in {{cookiecutter.project_name}} directory. For example if you want have settings for SSL here, put it fiels in that directory. Notice that even for directory names you can use parameters. For example directory {{cookiecutter.project_name}} will use project_name value. So if you set Miner for project_name, you will have Miner directory.
 2. Second, define your parameters in the cookiecutter.json file.
 That's it. Cookiecutter will create files and in them will use your paramters.
+
+
+## Licenses
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+
+
