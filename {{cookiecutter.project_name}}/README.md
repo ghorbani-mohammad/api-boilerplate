@@ -1,7 +1,7 @@
 ### Information
 
 - Server: {{cookiecutter.server}}
-- Port: {{cookiecutter.port}}
+- Port: {{cookiecutter.api_port}}
 - Project path: `{{cookiecutter.project_path}}`
 - Doc Link:
 - Nginx log files:

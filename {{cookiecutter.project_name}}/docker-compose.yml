@@ -18,7 +18,7 @@ services:
     volumes:
       - .:/app
     ports:
-      - {{cookiecutter.port}}:80
+      - {{cookiecutter.api_port}}:80
     command: ["python", "/app/{{cookiecutter.project_name}}/manage.py", "runserver", "0:80"]
     environment:
       DEBUG: 'True'

@@ -1,14 +1,14 @@
 {
   "project_name": "sandbox",
   "python_version": "3.9",
-  "port": "9090",
-  "server": "server-name",
+  "api_port": "9090",
+  "server_name": "server-name",
   "server_user": "mohammad",
   "server_ssh_port": "22",
   "server_ip": "88.99.18.179",
   "project_path": "/var/www/sandbox/",
   "gunicorn_worker": "2",
-  "domain": "sandbox.our-company.com",
+  "domain": "sandbox.m-gh.com",
   "docpasswd": "docs:$apr1$3til08mk$vNcM08sTlrZdVj6G6maO30",
-  "doc_domain": "doc.sandbox.our-company.com"
+  "doc_domain": "doc.sandbox.m-gh.com"
 }
