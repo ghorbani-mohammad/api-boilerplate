@@ -8,7 +8,7 @@ Other point is that this will craft your new project easily and in a fast way.
 
 
 ## Usage:
-1. Just install cookiecutter by pip in your terminal
+1. First, You need cookiecutter utility. Just install cookiecutter by pip in your terminal
  ```
  pip install cookiecutter
  ```
@@ -18,3 +18,9 @@ cookiecutter paht-to-this-dir
 ```
 3. Terminal will ask you question about parameters values. You can use default values by just press Enter.
 4. Boom!!! Your new project structure is ready.
+
+## How I can change it?
+It includes two steps;
+1. First, put your configuration files in {{cookiecutter.project_name}} directory. For example if you want have settings for SSL here, put it fiels in that directory.
+2. Second, define your parameters in the cookiecutter.json file.
+That's it. Cookiecutter will create files and in them will use your paramters.
