@@ -1,5 +1,5 @@
 ## What is this?
-This will create your project structure for Django drf by using cookiecutter utility. It will create your Dockerfile, docker-compoe.yml, .gitignore, nginx.conf and other commonly needed configurations. It will create requirement.in that you can put your limits on package versions.
+This will create your project structure for Django DRF by using cookiecutter utility. It will create your Dockerfile, docker-compoe.yml, .gitignore, nginx.conf and other commonly needed configurations. It will create requirement.in that you can put your limits on package versions.
 
 
 ## Why you should use this?
