@@ -8,6 +8,8 @@ services:
     restart: unless-stopped
     volumes:
       - {{cookiecutter.project_name}}_db:/var/lib/postgresql/data
+    env_file:
+      - .env
 
   {{cookiecutter.project_name}}_api:
     container_name: {{cookiecutter.project_name}}_api
@@ -19,8 +21,8 @@ services:
       - .:/app
     ports:
       - {{cookiecutter.api_port}}:80
-    environment:
-      DEBUG: 'True'
+    env_file:
+      - .env
 
   {{cookiecutter.project_name}}_celery:
     container_name: {{cookiecutter.project_name}}_celery
@@ -33,6 +35,8 @@ services:
     depends_on:
       - {{cookiecutter.project_name}}_db
       - {{cookiecutter.project_name}}_redis
+    env_file:
+      - .env
 
   {{cookiecutter.project_name}}_beat:
     container_name: {{cookiecutter.project_name}}_beat
