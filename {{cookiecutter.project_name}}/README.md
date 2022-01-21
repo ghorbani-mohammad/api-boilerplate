@@ -1,6 +1,6 @@
 ### Information
 
-- Server: {{cookiecutter.server}}
+- Server: {{cookiecutter.server_name}}
 - Port: {{cookiecutter.api_port}}
 - Project path: `{{cookiecutter.project_path}}`
 - Doc Link:
