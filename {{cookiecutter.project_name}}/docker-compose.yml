@@ -50,6 +50,8 @@ services:
     depends_on:
       - {{cookiecutter.project_name}}_db
       - {{cookiecutter.project_name}}_redis
+    env_file:
+      - .env
 
   {{cookiecutter.project_name}}_redis:
     container_name : {{cookiecutter.project_name}}_redis
