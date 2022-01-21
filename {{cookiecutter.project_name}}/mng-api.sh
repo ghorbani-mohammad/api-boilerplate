@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PROJECT_NAME='{{cookiecutter.project_name}}'
-SERVER_NAME='{{cookiecutter.server}}'
+SERVER_NAME='{{cookiecutter.server_name}}'
 PROJECT_PATH='{{cookiecutter.project_path}}'
 
 API_CONTAINER_NAME=${PROJECT_NAME}'_api'
