@@ -4,7 +4,7 @@ services:
 
   {{cookiecutter.project_name}}_db:
     container_name: {{cookiecutter.project_name}}_db
-    image: mdillon/postgis:11
+    image: postgres:13.4-alpine
     restart: unless-stopped
     volumes:
       - {{cookiecutter.project_name}}_db:/var/lib/postgresql/data
@@ -48,7 +48,7 @@ services:
 
   {{cookiecutter.project_name}}_redis:
     container_name : {{cookiecutter.project_name}}_redis
-    image: redis:5.0.8
+    image: redis:6.2-alpine
     restart: unless-stopped
 
 volumes:
