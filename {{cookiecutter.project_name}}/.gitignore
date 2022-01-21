@@ -1,6 +1,6 @@
-### Django ###
 __pycache__/
 .idea
+.env
 .vscode
 *.log
 *.pot
