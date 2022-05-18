@@ -1,9 +1,9 @@
 {
   "project_name": "sandbox",
-  "python_version": "3.9",
+  "python_version": "3.10",
   "api_port": "9090",
-  "server_name": "server-name",
-  "server_user": "mohammad",
+  "server_name": "DigitalOcean",
+  "server_user": "root",
   "server_ssh_port": "22",
   "server_ip": "88.99.18.179",
   "project_path": "/var/www/sandbox/",
