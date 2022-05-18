@@ -16,4 +16,5 @@ pyaes
 pycryptodome
 redis
 requests
+sentry-sdk
 unidecode
