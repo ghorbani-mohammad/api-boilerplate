@@ -29,10 +29,10 @@ jobs:
       - name: Push to server
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.STAGE_SERVER_IP }}
-          username: ${{ secrets.STAGE_SERVER_USERNAME }}
-          key: ${{ secrets.STAGE_SSHKEY }}
+          host:  secrets.STAGE_SERVER_IP 
+          username:  secrets.STAGE_SERVER_USERNAME 
+          key:  secrets.STAGE_SSHKEY 
           script: >
-            cd ${{ secrets.STAGE_PROJECT_PATH }}
+            cd  secrets.STAGE_PROJECT_PATH 
             && git pull 
             && ./mng-api.sh up
