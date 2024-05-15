@@ -11,6 +11,7 @@ db.sqlite3
 local_settings.py
 todo
 venv
+static
 {{cookiecutter.project_name}}_db
 {{cookiecutter.project_name}}/celerybeat-schedule
 {{cookiecutter.project_name}}/celerybeat.pid

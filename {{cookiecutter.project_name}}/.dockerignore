@@ -11,6 +11,7 @@ venv
 db.sqlite3
 docker-compose.yml
 docker-compose-pro.yml
+static
 {{cookiecutter.project_name}}/static
 {{cookiecutter.project_name}}/celerybeat-schedule
 {{cookiecutter.project_name}}/celerybeat.pid
