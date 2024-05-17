@@ -54,6 +54,3 @@ services:
     container_name : {{cookiecutter.project_name}}_redis
     image: redis:6.2-alpine
     restart: unless-stopped
-
-volumes:
-  {{cookiecutter.project_name}}_db:
